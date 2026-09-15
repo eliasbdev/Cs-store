@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="tl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cyber Security Practice Site</title>
+  <link rel="stylesheet" href="style7.css">
+
+  <!-- TODO (Practice #4): Walang Content-Security-Policy meta tag pa dito.
+       Pag-aaralan natin kung paano magdagdag nito. -->
+</head>
+<body>
+
+  <header>
+    <h1>Ang Munting Tindahan</h1>
+    <p>Sample static website para sa pag-aaral ng cybersecurity</p>
+  </header>
+
+  <main>
+    <section id="about">
+      <h2>Tungkol Dito</h2>
+      <p>Isa itong simpleng one-page site na may ilang <strong>sadyang butas</strong>
+      (intentional vulnerabilities) para may mapraktisan ka. Hindi ito totoong
+      tindahan — walang backend, walang totoong pera.</p>
+    </section>
+
+    <section id="comment-box">
+      <h2>Mag-iwan ng Komento</h2>
+      <p>Subukan mong i-type dito ang: <code>&lt;img src=x onerror=alert('XSS')&gt;</code></p>
+      <input type="text" id="commentInput" placeholder="Isulat ang iyong komento...">
+      <button id="commentBtn">I-post ang Komento</button>
+      <div id="commentList"></div>
+    </section>
+
+    <section id="cart-demo">
+      <h2>Simpleng Cart Demo</h2>
+      <label for="productName">Pangalan ng produkto:</label>
+      <input type="text" id="productName" value="Sample Item">
+      <button id="addToCartBtn">Idagdag sa Cart</button>
+      <ul id="cartList"></ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>Ginawa para sa cybersecurity practice. &copy; 2026</p>
+  </footer>
+
+  <script src="main7.js"></script>
+</body>
+</html>
