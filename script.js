@@ -22,7 +22,7 @@ commentBtn.addEventListener('click', () => {
   // o gumawa ng text node gamit ang document.createElement.
   const entry = document.createElement('div');
   entry.className = 'comment';
-  entry.textContent = text; // <-- ito yung butas
+  entry.innerHTML = text; // <-- ito yung butas
 
   commentList.appendChild(entry);
   commentInput.value = '';
@@ -51,3 +51,16 @@ addToCartBtn.addEventListener('click', () => {
 });
 
 loadCart();
+
+// --- Subscribe CTA form (Practice #5: parehong butas, ibang lugar) ---
+const subBtn = document.getElementById('subBtn');
+const subName = document.getElementById('subName');
+const subGreeting = document.getElementById('subGreeting');
+
+subBtn.addEventListener('click', () => {
+  const name = subName.value;
+
+  // VULNERABLE ulit: subukan mong ayusin ito mag-isa gamit ang
+  // aralin natin kanina sa comment box.
+  subGreeting.innerHTML = 'Salamat sa pag-subscribe, ' + name + '!';
+});
