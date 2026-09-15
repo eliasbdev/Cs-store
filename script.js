@@ -22,7 +22,7 @@ commentBtn.addEventListener('click', () => {
   // o gumawa ng text node gamit ang document.createElement.
   const entry = document.createElement('div');
   entry.className = 'comment';
-  entry.textContent = text; // <-- ito yung butas
+  entry.textcontent = text; // <-- ito yung butas
 
   commentList.appendChild(entry);
   commentInput.value = '';
@@ -62,5 +62,5 @@ subBtn.addEventListener('click', () => {
 
   // VULNERABLE ulit: subukan mong ayusin ito mag-isa gamit ang
   // aralin natin kanina sa comment box.
-  subGreeting.textContent = 'Salamat sa pag-subscribe, ' + name + '!';
+  subGreeting.textcontent = 'Salamat sa pag-subscribe, ' + name + '!';
 });
