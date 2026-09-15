@@ -22,7 +22,7 @@ commentBtn.addEventListener('click', () => {
   // o gumawa ng text node gamit ang document.createElement.
   const entry = document.createElement('div');
   entry.className = 'comment';
-  entry.innerHTML = text; // <-- ito yung butas
+  entry.textContent = text; // <-- ito yung butas
 
   commentList.appendChild(entry);
   commentInput.value = '';
